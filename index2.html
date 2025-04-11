@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: lightcyan;
+        }
+
+        h1 {
+            color: #fff;
+            background: linear-gradient(to right, Blue, Indigo, Violet);
+            text-align: center;
+            border-bottom: 2px solid black;
+
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* border: 2px solid black; */
+            margin: 40px;
+        }
+
+        .item1 {
+            /* background-color: orange; */
+            background: linear-gradient(to bottom, rgb(255, 166, 0), white, green);
+            animation-name: item1;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item1 {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(100px);
+            }
+
+        }
+
+        .item2 {
+            height: 120px;
+            background-color: lightseagreen;
+            animation-name: item2;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item2 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        .item3 {
+            background-color: lightpink;
+            animation-name: item3;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item3 {
+            0% {
+                filter: opacity(0.1);
+            }
+
+            100% {
+                filter: opacity(1);
+            }
+
+        }
+
+        .item4 {
+            border: 10px solid;
+            animation-name: item4;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item4 {
+            0% {
+                border-color: yellow;
+                transform: rotate(0deg);
+            }
+
+            25% {
+                border-color: red;
+            }
+
+            50% {
+                border-color: blue;
+            }
+
+            100% {
+                border-color: green;
+                transform: rotate(360deg);
+            }
+
+        }
+
+        .item5 {
+            background: radial-gradient(yellow, red);
+            animation-name: item5;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item5 {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.5);
+            }
+
+        }
+
+        .item6 {
+            background: radial-gradient(circle, violet, lightblue, pink);
+            animation-name: item6;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item6 {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-100px);
+            }
+
+        }
+
+        .item7 {
+            background: linear-gradient(to right, green, white);
+            animation-name: item7;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item7 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        .item8 {
+
+            animation-name: item8;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item8 {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: aqua;
+            }
+
+
+            100% {
+                background-color: chartreuse;
+            }
+
+        }
+
+        .item9 {
+            background: linear-gradient(to bottom, rgb(15, 110, 253), white);
+            animation-name: item9;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item9 {
+            0% {
+                transform: translateX(0px);
+            }
+
+            50% {
+                transform: translateY(-100px);
+            }
+
+            100% {
+                transform: translateX(200px);
+            }
+
+        }
+
+        .item10 {
+            /* background: linear-gradient(to bottom,rgb(122, 15, 253),white); */
+            animation-name: item10;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes item10 {
+            0% {
+                box-shadow: 0px 0px 50px rgb(227, 32, 65);
+                background-color: rgb(227, 32, 65);
+            }
+
+            50% {
+                box-shadow: 0px 0px 50px rgb(215, 91, 133);
+                background-color: rgb(215, 91, 133);
+            }
+
+            100% {
+                box-shadow: 0px 0px 50px rgb(252, 75, 252);
+                background-color: rgb(252, 75, 252);
+            }
+
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <h1>Animations & Transitions</h1>
+
+    <div class="container">
+        <div class="div item1"></div>
+        <div class="div item2"></div>
+        <div class="div item3"></div>
+        <div class="div item4"></div>
+        <div class="div item5"></div>
+        <div class="div item6"></div>
+        <div class="div item7"></div>
+        <div class="div item8"></div>
+        <div class="div item9"></div>
+        <div class="div item10"></div>
+
+
+    </div>
+</body>
+
+</html>
